@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>armstrong</title>
+  </head>
+
+  <body>
+    <h2>Enter a number :-</h2>
+    <form>
+      <input type="text" placeholder="Enter number " id="value" />
+      <input type="button" value="Submit" onclick="checkArmstrong()" />
+    </form>
+    <script>
+      function checkArmstrong() {
+        num = document.getElementById("value").value;
+        var Number = num;
+        var digits = 0;
+        while (num > 0) {
+          digits = digits + 1;
+          num = parseInt(num / 10);
+        }
+        num = Number;
+        var sum = 0;
+        while (num > 0) {
+          var digit = num % 10;
+          sum = sum + Math.pow(digit, digits);
+          num = parseInt(num / 10);
+        }
+        if (sum == Number) {
+          alert("YES");
+        } else {
+          alert("NO");
+        }
+      }
+    </script>
+  </body>
+</html>

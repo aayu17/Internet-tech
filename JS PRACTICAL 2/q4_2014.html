@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Q4 2014</title>
+  </head>
+
+  <body>
+    <h2>Enter a number :-</h2>
+    <form id="myForm">
+      <input  type="text" iplaceholder="Enter number " id="value1" /><br />
+      <input  type="text" placeholder="Square Or Double" id="value2" /><br />
+      <input  type="radio" value="Radio Box 1" id="rb1" onclick="double();return false;" />
+      <label  for="rab1">DOUBLE</label><br />
+      <input  type="radio" value="Radio Box 2" id="rb2" onclick="square();return false;" />
+      <label  for="rab1">SQUARE</label><br />
+    </form>
+    <script>
+      function double() {
+          var val = document.getElementById("value1").value;
+          var double = parseInt(val) + parseInt(val);
+          document.getElementById("value2").value = double;
+      }
+      function square() {
+        var val = document.getElementById("value1").value;
+        var square = parseInt(val) * parseInt(val);
+        document.getElementById("value2").value = square;
+
+      }
+    </script>
+  </body>
+</html>

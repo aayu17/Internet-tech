@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>factorial</title>
+  </head>
+
+  <body>
+    <h2>Enter a number :-</h2>
+    <form>
+      <input type="text" placeholder="Enter number "id="value" />
+      <input type="button" value="Submit" onclick="getFac()" />
+    </form>
+    <script>
+        function getFac() {
+          console.log("Hi")
+        
+          var val = document.getElementById("value").value;
+          function factorial(val) {
+            var ans = 1;
+  
+            for (var i = 2; i <= val; i++) {
+              ans = ans * i;
+            }
+            return ans;
+          }
+          var fact = factorial(val);
+          alert(fact);
+        }
+    </script>
+  </body>
+</html>

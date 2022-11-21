@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>LogIn</title>
+  </head>
+
+  <body>
+    <h2>Enter LogIn Details:-</h2>
+    <form>
+      <input type="text" placeholder="Enter E-mail " id="email" /><br />
+      <input type="password" placeholder="Enter Password " id="passwd" /><br />
+      <input type="button" value="LogIn" onclick="login()" />
+    </form>
+    <script>
+      let i = 0;
+      function login() {
+        i++;
+        if (i > 3) {
+          alert("Unsuccessful login");
+          return;
+        }
+        console.log("Hi");
+
+        var email = document.getElementById("email").value;
+        var password = document.getElementById("passwd").value;
+        if (email == "" || password == "") {
+          alert("Either email or password field is empty");
+        } else if (email == "admin@gmail.com" && password == "admin123") {
+          alert("Welcome");
+        } else alert("Wrong Credentials");
+      }
+    </script>
+  </body>
+</html>
